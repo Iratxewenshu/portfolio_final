@@ -1,4 +1,5 @@
 const projectsGrid = document.getElementById("projectsGrid");
+const filterButtons = document.querySelectorAll(".filter-button");
 
 function renderProjects(projectsToShow) {
   projectsGrid.innerHTML = "";
@@ -37,3 +38,23 @@ function renderProjects(projectsToShow) {
 }
 
 renderProjects(proyectos);
+
+for (let i = 0; i < filterButtons.length; i++) {
+  filterButtons[i].addEventListener("click", function () {
+    const selectedCategory = this.getAttribute("data-filter");
+    let filteredProjects = proyectos;
+
+    if (selectedCategory !== "Todos") {
+      filteredProjects = proyectos.filter(function (project) {
+        return project.categoria === selectedCategory;
+      });
+    }
+
+    for (let j = 0; j < filterButtons.length; j++) {
+      filterButtons[j].classList.remove("active");
+    }
+
+    this.classList.add("active");
+    renderProjects(filteredProjects);
+  });
+}
