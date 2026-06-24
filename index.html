@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de diseño web con una selección de proyectos académicos."
+    />
+    <title>Tu nombre | Portfolio</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="brand" href="index.html">Tu nombre</a>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <ul class="nav-list">
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <p class="section-label">Portfolio personal</p>
+          <h1>Hola, soy Tu nombre.<br />Tu especialidad.</h1>
+          <p class="hero-text">
+            Creo proyectos digitales claros, funcionales y pensados para las
+            personas.
+          </p>
+          <a class="button" href="#proyectos">Ver proyectos</a>
+        </div>
+      </section>
+
+      <section class="section" id="sobre-mi">
+        <div class="container about-layout">
+          <div>
+            <p class="section-label">Sobre mí</p>
+            <h2>Diseño sencillo y funcional</h2>
+          </div>
+          <div class="about-text">
+            <p>
+              Soy estudiante de diseño y me interesa crear experiencias
+              digitales ordenadas, accesibles y fáciles de utilizar.
+            </p>
+            <p>
+              Este portfolio reúne una selección de trabajos realizados
+              durante la asignatura de Diseño Web.
+            </p>
+            <h3>Áreas de interés</h3>
+            <ul class="skills-list">
+              <li>Diseño web</li>
+              <li>Diseño editorial</li>
+              <li>Diseño responsive</li>
+              <li>HTML, CSS y JavaScript</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="proyectos">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">Selección de trabajos</p>
+            <h2>Proyectos</h2>
+          </div>
+
+          <div class="filters" aria-label="Filtrar proyectos">
+            <button class="filter-button active" type="button" data-filter="Todos">
+              Todos
+            </button>
+            <button class="filter-button" type="button" data-filter="Editorial">
+              Editorial
+            </button>
+            <button class="filter-button" type="button" data-filter="Eventos">
+              Eventos
+            </button>
+            <button class="filter-button" type="button" data-filter="Ecommerce">
+              Ecommerce
+            </button>
+            <button class="filter-button" type="button" data-filter="Espacios">
+              Espacios
+            </button>
+          </div>
+
+          <div class="projects-grid" id="projectsGrid">
+            <p>Los proyectos se mostrarán aquí.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contacto">
+        <div class="container contact-layout">
+          <div>
+            <p class="section-label">Contacto</p>
+            <h2>Hablemos</h2>
+            <p>
+              Si quieres conocer mejor mi trabajo, puedes escribirme mediante
+              este formulario.
+            </p>
+            <p>
+              Email:
+              <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a>
+            </p>
+          </div>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-field">
+              <label for="name">Nombre</label>
+              <input id="name" name="name" type="text" />
+              <p class="form-error" id="nameError"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" />
+              <p class="form-error" id="emailError"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" rows="6"></textarea>
+              <p class="form-error" id="messageError"></p>
+            </div>
+
+            <button class="button" type="submit">Enviar mensaje</button>
+            <p class="form-feedback" id="formFeedback"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© 2026 Tu nombre</p>
+        <div class="footer-links">
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
