@@ -1,0 +1,22 @@
+:root {
+  --color-background: #f5f2ec;
+  --color-surface: #ffffff;
+  --color-text: #202020;
+  --color-muted: #686868;
+  --color-accent: #9c4f36;
+  --color-accent-dark: #743925;
+  --color-border: #d8d2c8;
+  --color-error: #a42626;
+  --color-success: #2f6b3c;
+
+  --font-title: Georgia, "Times New Roman", serif;
+  --font-body: Arial, Helvetica, sans-serif;
+
+  --space-small: 0.75rem;
+  --space-medium: 1.5rem;
+  --space-large: 3rem;
+  --space-section: 5rem;
+
+  --max-width: 1120px;
+  --transition: 0.3s;
+}

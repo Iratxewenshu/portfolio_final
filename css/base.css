@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-title);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-medium);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: var(--space-medium);
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: var(--space-small);
+}
+
+p {
+  margin-bottom: var(--space-medium);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: var(--max-width);
+  width: 90%;
+}
+
+.section {
+  padding: var(--space-section) 0;
+}
+
+.section-alt {
+  background-color: var(--color-surface);
+}
+
+.section-label {
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  margin-bottom: var(--space-small);
+  text-transform: uppercase;
+}
