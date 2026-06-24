@@ -1,0 +1,156 @@
+Proyecto final. Portfolio personal 
+10 
+Sitio web profesional publicado en GitHub Pages 
+Contexto 
+Durante este curso habéis aprendido a construir páginas web desde cero: a estructurar 
+contenido con HTML semántico, a diseñar interfaces con CSS (Flexbox, Grid, responsive, 
+animaciones), a añadir interactividad con JavaScript, y a organizar el trabajo con Git. Habéis 
+hecho siete proyectos para clientes ficticios. Ahora os toca hacer uno para vosotros. 
+El portfolio personal es de los proyectos web más importantes que vais a crear como 
+diseñadoras (por lo menos, a nivel personal). Es la primera cosa que mira un estudio antes de 
+una entrevista, la URL que ponéis en el CV y la forma en que os presentáis profesionalmente 
+en internet. 
+A diferencia de cualquier otro ejercicio, esta vez el contenido es vuestro. Este proyecto integra 
+todo lo aprendido en el curso. No tenéis tecnologías nuevas que estudiar: solo hay que 
+combinar bien lo que ya sabéis y llevarlo a un nivel de acabado que os enorgullezca enseñar. 
+Briefing 
+Diseñad y desarrollad vuestro portfolio web personal. El resultado debe ser un sitio publicado 
+en internet, con una URL real y permanente, que podáis compartir mañana mismo. Por ahora, 
+lo haremos con GitHub Pages, pero el objetivo es que sea un sitio profesional que podáis 
+mantener y actualizar a lo largo de vuestra carrera. 
+Sobre el contenido: los proyectos que mostréis deben ser reales: trabajos de esta asignatura, 
+de otras asignaturas del grado, o proyectos personales. Podéis incluir proyectos en curso o sin 
+terminar si los presentáis como tales. 
+Páginas obligatorias 
+Página principal (index.html) 
+Con estas secciones como mínimo: 
+● Hero / Presentación: vuestro nombre, título profesional o descripción breve y una 
+llamada a la acción que lleve a la galería de proyectos o al contacto. 
+● Sobre mí: texto breve sobre quiénes sois, qué tipo de diseño os interesa, de dónde 
+venís. Podéis añadir un listado de habilidades, herramientas o disciplinas. 
+● Proyectos: la galería de vuestros proyectos. Las tarjetas se generan 
+dinámicamente desde un array de objetos JavaScript e incluyen un sistema de 
+filtrado por tipo o disciplina con re-render completo. Mínimo 6 proyectos. 
+● Contacto: formulario de contacto con validación de campos, o datos directos de 
+contacto. Footer con redes sociales o enlaces relevantes. 
+Páginas de detalle de proyecto (una por proyecto) 
+Cada proyecto tiene su propia página con una estructura mínima de caso de estudio: 
+● Imagen o imágenes principales del proyecto 
+● Contexto: qué era el encargo o la motivación del proyecto 
+● Proceso: decisiones tomadas, iteraciones, bocetos o imágenes intermedias si las 
+tenéis 
+● Resultado: las imágenes finales con suficiente tamaño y calidad 
+● Ficha técnica: año, asignatura o contexto, herramientas o materiales utilizados 
+Un caso de estudio bien construido puede ser conciso: lo importante es que explique el porqué 
+de las decisiones, no solo el qué. La navegación desde la galería hasta la página de detalle (y 
+de vuelta) debe funcionar correctamente. 
+Requisitos técnicos 
+JavaScript 
+Obligatorio: 
+● Array de objetos externo: los proyectos de la galería se renderizan desde un array 
+de objetos JavaScript en un archivo .js externo. No están escritos a mano en el 
+HTML. 
+● Filtrado con .filter(): al hacer clic en una categoría, se regenera la galería 
+mostrando solo los proyectos de ese tipo. No se trata de ocultar tarjetas: se borra el 
+contenido y se vuelve a pintar solo lo que corresponde. 
+● Una interacción JavaScript adicional a vuestra elección: lightbox para ver 
+imágenes a pantalla completa, validación del formulario de contacto, navbar con 
+comportamiento al hacer scroll, tema oscuro, u otras. 
+● IntersectionObserver en al menos dos secciones de la página principal: las 
+secciones animan su entrada cuando aparecen en el viewport al hacer scroll. 
+Sin errores en la consola del navegador en ninguna de las páginas. 
+CSS 
+HTML 
+Responsive 
+Git y GitHub Pages 
+● Organización modular obligatoria: el CSS debe estar dividido en al menos tres 
+archivos con responsabilidades claras: variables.css con todas las custom 
+properties, archivos para los componentes (navbar, tarjetas, botones...) y un 
+main.css que importa todo lo demás con @import. Un solo <link> en el HTML. 
+● Variables CSS para todos los valores repetidos: ningún color, fuente o espaciado 
+clave debe aparecer con valor literal más de una vez en el CSS. 
+● Uso de Flexbox y/o Grid para los layouts. Bootstrap es opcional, pero el sitio no 
+puede parecer Bootstrap por defecto. 
+● Transiciones en todos los elementos interactivos. 
+● Estructura semántica correcta en todas las páginas. 
+● Un único <h1> por página. 
+● Todas las imágenes con atributo alt descriptivo. 
+● Favicon visible en la pestaña del navegador. 
+● Mobile-first. Funciona correctamente desde 375px hasta 1440px o más. 
+● La galería de proyectos se adapta al espacio disponible en cada pantalla. 
+● Las páginas de detalle son legibles y bien proporcionadas en móvil. 
+● El proyecto debe estar en un repositorio público de GitHub. 
+● Mínimo 8 commits con mensajes descriptivos que reflejen el proceso de desarrollo. 
+Un único commit con todo el proyecto no es válido. 
+● El sitio debe estar publicado en GitHub Pages y accesible en la URL 
+vuestrousuario.github.io/nombre-repositorio. 
+● El repositorio debe incluir un README.md con: descripción breve del proyecto, URL 
+en vivo, tech stack, y una captura de pantalla. 
+Uso de IA 
+Podéis usar herramientas de inteligencia artificial (GitHub Copilot, Claude, ChatGPT, v0, 
+Lovable u otras) para ayudaros con el código o el diseño. Si lo hacéis, debéis incluir en el 
+README.md una declaración de uso indicando qué herramientas habéis utilizado y para qué 
+partes del proyecto. 
+La declaración de uso de IA no penaliza; la ausencia de declaración cuando se ha usado sí 
+puede penalizar. 
+Estructura de archivos 
+mi-portfolio/             ← nombre del repositorio 
+├── index.html 
+├── proyecto-nombre.html  ← una por proyecto (mínimo 6) 
+├── css/ 
+│   ├── variables.css 
+│   ├── main.css 
+│   └── components/       ← opcional 
+│       ├── navbar.css 
+│       ├── cards.css 
+│       └── ... 
+├── js/ 
+│   ├── proyectos.js      ← el array de datos 
+│   └── main.js           ← lógica de render, filtro e interacciones 
+├── img/ 
+│   ├── proyectos/        ← imágenes organizadas por proyecto 
+│   
+└── ... 
+├── .gitignore 
+└── README.md 
+Imágenes optimizadas: máximo 300 KB por imagen. Usad Squoosh 
+Links to an external site. 
+o TinyPNG 
+Links to an external site. 
+si necesitáis reducir el peso. 
+Entregables 
+● URL del repositorio de GitHub. 
+● Carpeta .zip con el proyecto completo. 
+Importante: Aseguraos de que el repositorio es público y de que la URL de GitHub Pages 
+funciona antes de enviar el enlace. 
+Criterios de evaluación 
+Criterio 
+Puntos 
+Galería dinámica desde array de datos + filtro con .filter() 
+1,5 
+Páginas de detalle con estructura de caso de estudio (mín. 6 
+proyectos) 
+2 
+JavaScript adicional: al menos 1 interacción más allá del array y 
+el filtro 
+0,5 
+IntersectionObserver en al menos 2 secciones 
+0,5 
+Git: ≥ 8 commits con mensajes descriptivos, proceso visible 
+0,5 
+GitHub Pages funcional + README con URL, stack y captura 
+0,5 
+Responsive mobile-first: funciona correctamente en móvil y 
+escritorio 
+1 
+CSS modular: archivos separados, variables coherentes en 
+:root 
+1 
+Diseño visual: identidad propia, coherencia entre páginas, 
+acabado profesional 
+2 
+Contenido: proyectos reales, casos de estudio con proceso 
+documentado 
+0,5 
+Total 
+10
