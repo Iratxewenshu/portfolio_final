@@ -108,6 +108,38 @@
   gap: var(--space-large);
 }
 
+.project-card {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+}
+
+.project-link {
+  display: block;
+}
+
+.project-image {
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.project-info {
+  padding: var(--space-medium);
+}
+
+.project-meta {
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: var(--space-small);
+  text-transform: uppercase;
+}
+
+.project-info p {
+  color: var(--color-muted);
+  margin-bottom: 0;
+}
+
 .contact-form {
   background-color: var(--color-surface);
   padding: var(--space-medium);
