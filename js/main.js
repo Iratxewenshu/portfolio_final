@@ -58,3 +58,60 @@ for (let i = 0; i < filterButtons.length; i++) {
     renderProjects(filteredProjects);
   });
 }
+
+// Validación básica del formulario de contacto.
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const message = document.getElementById("message");
+  const nameError = document.getElementById("nameError");
+  const emailError = document.getElementById("emailError");
+  const messageError = document.getElementById("messageError");
+  const formFeedback = document.getElementById("formFeedback");
+  let formIsValid = true;
+
+  nameError.textContent = "";
+  emailError.textContent = "";
+  messageError.textContent = "";
+  formFeedback.textContent = "";
+
+  if (name.value.trim() === "") {
+    nameError.textContent = "Escribe tu nombre.";
+    formIsValid = false;
+  }
+
+  if (email.value.trim() === "" || !email.value.includes("@")) {
+    emailError.textContent = "Escribe un email válido.";
+    formIsValid = false;
+  }
+
+  if (message.value.trim() === "") {
+    messageError.textContent = "Escribe un mensaje.";
+    formIsValid = false;
+  }
+
+  if (formIsValid) {
+    formFeedback.textContent = "Mensaje preparado correctamente.";
+    contactForm.reset();
+  }
+});
+
+// Entrada de secciones al aparecer en la pantalla.
+const sectionsToReveal = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(function (entries) {
+  for (let i = 0; i < entries.length; i++) {
+    if (entries[i].isIntersecting) {
+      entries[i].target.classList.add("visible");
+      observer.unobserve(entries[i].target);
+    }
+  }
+});
+
+for (let i = 0; i < sectionsToReveal.length; i++) {
+  observer.observe(sectionsToReveal[i]);
+}

@@ -254,3 +254,14 @@ figcaption {
   display: inline-block;
   padding-bottom: 0.2rem;
 }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
